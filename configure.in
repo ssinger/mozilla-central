@@ -1702,6 +1702,10 @@ if test -n "$MOZ_JPROF"; then
     AC_DEFINE(MOZ_JPROF)
 fi
 
+MOZ_ARG_DISABLE_BOOL(ion,
+[  --disable-ion      Disable use of the IonMonkey JIT],
+  ENABLE_ION= )
+
 dnl ========================================================
 dnl SPS Profiler
 dnl ========================================================
