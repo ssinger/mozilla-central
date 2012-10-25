@@ -14,8 +14,9 @@
 
 #include "gc/Root.h"
 #include "vm/GlobalObject.h"
+#ifdef JS_ION
 #include "ion/IonFrames.h"
-
+#endif
 #include "vm/Stack-inl.h"
 
 #ifndef jsinferinlines_h___
@@ -107,8 +108,12 @@ CompilerOutput::mjit() const
 inline ion::IonScript *
 CompilerOutput::ion() const
 {
+#ifdef JS_ION
     JS_ASSERT(isIon() && isValid());
     return script->ionScript();
+#else
+    return NULL;
+#endif
 }
 
 inline bool
@@ -117,7 +122,7 @@ CompilerOutput::isValid() const
     if (!script)
         return false;
 
-#ifdef DEBUG
+#if defined(DEBUG) && (defined(JS_METHODJIT) || defined(JS_ION))
     TypeCompartment &types = script->compartment()->types;
 #endif
 
@@ -134,6 +139,7 @@ CompilerOutput::isValid() const
     }
 #endif
 
+#ifdef JS_ION
     if (isIon()) {
         if (script->hasIonScript()) {
             JS_ASSERT(this == script->ion->recompileInfo().compilerOutput(types));
@@ -143,6 +149,7 @@ CompilerOutput::isValid() const
             return true;
         return false;
     }
+#endif
     return false;
 }
 
