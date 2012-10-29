@@ -36,11 +36,11 @@
  * the terms of any one of the MPL, the GPL or the LGPL.
  *
  * ***** END LICENSE BLOCK ***** */
-
+#include "fsm.h"
+#include "ccsip_sdp.h"
 #include "sdp_os_defs.h"
 #include "sdp.h"
 #include "sdp_private.h"
-#include "ccsip_sdp.h"
 #include "rtp_defs.h"
 
 /* Function:    sdp_find_media_level

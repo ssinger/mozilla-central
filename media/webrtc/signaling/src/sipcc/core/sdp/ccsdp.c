@@ -37,6 +37,7 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
+#include "fsm.h"
 #include "sdp.h"
 #include "ccapi.h"
 

@@ -38,7 +38,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 #include <errno.h>
-
+#include "fsm.h"
 #include "sdp_os_defs.h"
 #include "sdp.h"
 #include "sdp_private.h"

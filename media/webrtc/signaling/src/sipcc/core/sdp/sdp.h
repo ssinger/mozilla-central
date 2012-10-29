@@ -584,6 +584,7 @@ extern const char *sdp_get_result_name(sdp_result_e rc);
 
 /* sdp_access.c */
 extern tinybool sdp_version_valid(void *sdp_p);
+
 extern int32 sdp_get_version(void *sdp_p);
 extern sdp_result_e sdp_set_version(void *sdp_p, int32 version);
 

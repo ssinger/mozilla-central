@@ -85,6 +85,7 @@
 
 #include "cpr_types.h"
 #include "cpr_memory.h"
+#include "fsm.h"
 #include "sdp.h"
 #include "text_strings.h"
 #include "ccsip_sdp.h"

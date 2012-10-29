@@ -13,10 +13,11 @@
       'type': '<(library)',
       'include_dirs': [
         'include',
+        '../../../../common_audio/signal_processing/include'
       ],
       'direct_dependent_settings': {
         'include_dirs': [
-          'include',
+          'include'          
         ],
       },
       'sources': [
@@ -32,8 +33,7 @@
           'target_name': 'pcm16b_unittests',
           'type': 'executable',
           'dependencies': [
-            'PCM16B',
-            '<(webrtc_root)/test/test.gyp:test_support_main',
+            'PCM16B',            '<(webrtc_root)/test/test.gyp:test_support_main',
             '<(DEPTH)/testing/gtest.gyp:gtest',
           ],
           'sources': [

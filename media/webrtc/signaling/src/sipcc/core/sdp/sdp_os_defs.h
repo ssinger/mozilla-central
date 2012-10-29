@@ -57,11 +57,15 @@
 typedef uint8_t    tinybool;
 typedef uint8_t    u8;
 typedef uint16_t   u16;
+#if ! defined(PROTYPES_H)
 typedef uint16_t   uint16;
+#endif
 typedef uint32_t   u32;
+#if ! defined (PROTYPES_H)
 typedef uint32_t   uint32;
 typedef int32_t    int32;
 typedef int16_t    int16;
+#endif
 typedef unsigned short ushort;
 typedef unsigned long  ulong;
 #define inline 

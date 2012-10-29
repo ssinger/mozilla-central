@@ -39,16 +39,16 @@
 
 #include <errno.h>
 #include <limits.h>
-
+#include "fsm.h"
 #include "cpr_types.h"
 #include "cpr_rand.h"
 #include "sdp.h"
-#include "fsm.h"
 #include "gsm_sdp.h"
 #include "util_string.h"
 #include "lsm.h"
 #include "sip_interface_regmgr.h"
 #include "plat_api.h"
+
 
 static const char *gsmsdp_crypto_suite_name[SDP_SRTP_MAX_NUM_CRYPTO_SUITES] =
 {
