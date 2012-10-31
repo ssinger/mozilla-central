@@ -116,7 +116,7 @@ struct Cell
 const size_t PageShift = 13;
 const size_t ArenaShift = PageShift;
 #elif defined(__powerpc__)
-const size_t PageShift = 16;
+const size_t PageShift = 12;
 const size_t ArenaShift = 12;
 #else
 const size_t PageShift = 12;
